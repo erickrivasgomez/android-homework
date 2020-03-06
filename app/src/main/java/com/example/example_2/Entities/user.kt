@@ -2,7 +2,6 @@ package com.example.example_2.Entities
 
 import androidx.room.*
 
-
 @Entity
 data class User(
     @PrimaryKey(autoGenerate = true)

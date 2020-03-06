@@ -27,11 +27,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("Nombre", Nombre)
             intent.putExtra("Apellido", Apellido)
             startActivity(intent)
-
         }
-
-
-
-
     }
 }

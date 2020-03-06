@@ -1,4 +1,5 @@
 package com.example.example_2.Entities
+
 import android.content.Context
 import androidx.room.*
 
@@ -16,15 +17,19 @@ abstract class RoomUserDatabase : RoomDatabase() {
         var INSTANCE: RoomUserDatabase? = null
 
         fun getAppDataBase(context: Context): RoomUserDatabase? {
-            if (INSTANCE == null){
-                synchronized(RoomUserDatabase::class){
-                    INSTANCE = Room.databaseBuilder(context.applicationContext, RoomUserDatabase::class.java, "myDB1").allowMainThreadQueries().build()
+            if (INSTANCE == null) {
+                synchronized(RoomUserDatabase::class) {
+                    INSTANCE = Room.databaseBuilder(
+                        context.applicationContext,
+                        RoomUserDatabase::class.java,
+                        "myDB1"
+                    ).allowMainThreadQueries().build()
                 }
             }
             return INSTANCE
         }
 
-        fun destroyDataBase(){
+        fun destroyDataBase() {
             INSTANCE = null
         }
     }

@@ -34,7 +34,7 @@ class SecondActivity : AppCompatActivity() {
 
             if (a != null) {
                 textSaludo2.text ="Usuario : $a "
-                textSaludo3.text ="insertado en la base de datos correctamente"
+                textSaludo3.text ="registrado correctamente"
             }
 
         }
